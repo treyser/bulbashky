@@ -2,12 +2,16 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { ID, META, MAX, redraw } from "./common.js";
 
+// Vite підставляє сюди base з конфіга — /bulbashky/
+const BASE = import.meta.env.BASE_URL;
+const url = (path) => new URL(BASE + path, window.location.origin).href;
+
 OBR.onReady(() => {
   OBR.contextMenu.create({
     id: `${ID}/menu`,
     icons: [
       {
-        icon: "/icon.svg",
+        icon: url("icon.svg"),
         label: "Сп'яніння",
         // тільки для зображень-персонажів на шарі CHARACTER
         filter: {
@@ -18,7 +22,7 @@ OBR.onReady(() => {
         },
       },
     ],
-    embed: { url: "/index.html", height: 190 },
+    embed: { url: url("index.html"), height: 210 },
   });
 
   // якщо токен видалили — прибираємо його бульбашки
