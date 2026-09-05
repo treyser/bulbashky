@@ -1,0 +1,9 @@
+{
+  "name": "Сп'яніння",
+  "version": "0.1.0",
+  "manifest_version": 1,
+  "description": "Позначки сп'яніння бульбашками біля токена персонажа.",
+  "author": "Nikita",
+  "icon": "https://treyser.github.io/bulbashky/icon.svg",
+  "background_url": "https://treyser.github.io/bulbashky/background.html"
+}
